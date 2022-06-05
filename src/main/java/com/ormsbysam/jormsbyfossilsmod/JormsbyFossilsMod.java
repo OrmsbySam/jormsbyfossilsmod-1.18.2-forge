@@ -1,6 +1,7 @@
 package com.ormsbysam.jormsbyfossilsmod;
 
 import com.mojang.logging.LogUtils;
+import com.ormsbysam.jormsbyfossilsmod.block.ModBlocks;
 import com.ormsbysam.jormsbyfossilsmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +31,7 @@ public class JormsbyFossilsMod {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 

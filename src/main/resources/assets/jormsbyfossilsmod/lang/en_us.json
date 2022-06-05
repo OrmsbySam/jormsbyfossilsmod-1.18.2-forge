@@ -1,3 +1,10 @@
 {
-  "item.jormsbyfossilsmod.citrine" : "Citrine"
+  "item.jormsbyfossilsmod.raw_citrine": "Raw Citrine",
+  "item.jormsbyfossilsmod.citrine": "Citrine",
+  "item.jormsbyfossilsmod.strawberry": "Strawberry",
+
+  "block.jormsbyfossilsmod.citrine_block": "Citrine Block",
+  "block.jormsbyfossilsmod.citrine_ore": "Citrine Ore",
+
+  "itemGroup.fossilstab": "Fossils Mod"
 }

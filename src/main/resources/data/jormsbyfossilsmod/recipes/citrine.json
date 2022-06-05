@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "citrine",
+  "ingredients": [
+    {
+      "item": "jormsbyfossilsmod:citrine_block"
+    }
+  ],
+  "result": {
+    "item": "jormsbyfossilsmod:citrine",
+    "count": 9
+  }
+}

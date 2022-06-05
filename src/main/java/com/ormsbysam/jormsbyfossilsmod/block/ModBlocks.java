@@ -1,6 +1,7 @@
 package com.ormsbysam.jormsbyfossilsmod.block;
 
 import com.ormsbysam.jormsbyfossilsmod.JormsbyFossilsMod;
+import com.ormsbysam.jormsbyfossilsmod.item.ModCreativeModeTab;
 import com.ormsbysam.jormsbyfossilsmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,7 +22,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CITRINE_BLOCK = registerBlock("citrine_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST)
-                    .requiresCorrectToolForDrops( )), CreativeModeTab.TAB_MATERIALS);
+                    .strength(9f).requiresCorrectToolForDrops( )), ModCreativeModeTab.FOSSILS_TAB);
+
+    public static final RegistryObject<Block> CITRINE_ORE = registerBlock("citrine_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f).requiresCorrectToolForDrops( )), ModCreativeModeTab.FOSSILS_TAB);
+
+
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
@@ -33,7 +41,6 @@ public class ModBlocks {
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab) {
-
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
     }
